@@ -15,3 +15,11 @@ wsl.exe --update
 if ($distroVersion -eq "1") {
     wsl.exe --set-version $distroName 2
 }
+
+# Prompt for restart
+$restartChoice = Read-Host "Do you want to restart your computer now? (Y/N)"
+if ($restartChoice -eq "Y" -or $restartChoice -eq "y") {
+    Restart-Computer -Force
+} else {
+    Write-Host "Script execution completed. No restart performed."
+}
