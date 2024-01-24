@@ -1,4 +1,6 @@
-wsl.exe --shutdown && net stop WslService && net stop LxssManager
+wsl.exe --shutdown 
+net stop WslService
+net stop LxssManager
 Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform -NoRestart
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux -NoRestart
 
